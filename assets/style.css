@@ -1,5 +1,5 @@
-@import url('skeleton.css');
-@import url('normalize.css');
+@import url('vendor/skeleton.css');
+@import url('vendor/normalize.css');
 @import url('list-item.css');
 @import url('form.css');
 
