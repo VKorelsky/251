@@ -33,24 +33,23 @@ app.get('/', (req, res) => {
   })
 })
 
-app.post('/submission', (req, res) => {
+app.post('/submit', (req, res) => {
   // Save new-post to DB
 
-  console.log(req.params);
-  res.json(200, {msg : 'OK'})
+  res.status(200).json({msg : 'OK'});
 })
 
 app.post('/upvote/:id', (req, res) => {
   // persist upvote to db
   console.log(req.params);
-  res.json(200, {msg : 'OK'})
+  res.status(200).json({msg : 'OK'});
 })
 
 
 // middleware
 app.use((err, req, res, next) => {
-  console.log(err)
-  res.status(500).send('Something broke!')
+  console.log(err);
+  res.status(500).send('Something broke!');
 })
 
 

@@ -1,3 +1,11 @@
 #btnsubmit {
   margin-top: 4%;
+  margin-bottom: 0%;
+}
+
+#notification {
+  color: rgba(16, 15, 15, 0.41);
+  font-size: 90%;
+  margin-top: 0%;
+  display: none;
 }
