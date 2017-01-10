@@ -8,20 +8,18 @@
     <div class="container">
         <div class="row">
             <div class="ten columns offset-by-one">
+
                 <div class="list-item">
                     <div class="list-upvotes">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <p>4</p>
                     </div>
                     <div class="list-main">
-                      <div class="title">
-                          <h4>News item</h4>
-                      </div>
-                      <div class="body">
-                          <p>Trump's latest tweet was crazy</p>
-                      </div>
+                          <h4 class="title">News item </h4>
+                          <p class="body">Trump's latest tweet was crazy</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -30,15 +28,20 @@
 
 <div class="form-frame">
     <div class="container">
-        <div class="row">
-            <div class="six columns offset-by-three">
-              <label for="title">Title</label>
-              <input class="u-full-width" type="text" placeholder="News item" id="title">
-             </div>
-             <div class="six columns offset-by-three">
-               <label for="body">Body</label>
-               <input class="u-full-width" type="text" placeholder="Juicy content" id="title">
-             </div>
-        </div>
+      <form id="input-taker" action='#'>
+          <div class="row">
+              <div class="six columns offset-by-three">
+                  <label for="title">Title</label>
+                  <input class="u-full-width" type="text" placeholder="News item" id="title">
+               </div>
+               <div class="six columns offset-by-three">
+                   <label for="body">Body</label>
+                   <input class="u-full-width" type="text" placeholder="Juicy content" id="title">
+               </div>
+               <div class="six columns offset-by-three">
+                   <input id="btnsubmit" class="button-primary" type="button" value="submit">
+               </div>
+            </div>
+        </form>
     </div>
 </div>

@@ -1,3 +1,5 @@
 $(document).ready( function() {
-  console.log("ready");
-})
+  $('#btnsubmit').on('click', function(e){
+    document.getElementById("input-taker").submit();
+  });
+});

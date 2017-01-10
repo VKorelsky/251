@@ -24,12 +24,12 @@ app.get('/', (request, response) => {
   })
 })
 
-app.post('/', (request, response) => {
+app.post('/submission', (request, response) => {
   // Save post to DB
   //return a json - 200 OK, 500 ERROR
+  console.log('hit');
 
-
-  response.render()
+  response.render('home')
 })
 
 // error logging middleware

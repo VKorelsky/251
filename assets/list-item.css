@@ -1,0 +1,40 @@
+.list-item {
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s ease;
+}
+
+.list-item:hover {
+  background-color: rgba(230, 222, 222, 0.24);
+}
+
+.list-upvotes {
+  padding-top: 3%;
+  padding-left: 5%;
+}
+
+.list-upvotes i{
+  font-size: 200%;
+  transition: color 0.7s ease;
+  transition: font-size 0.2s ease;
+}
+
+.list-upvotes i:hover {
+  color: grey;
+}
+
+.list-main {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.title {
+  padding-top: 2%;
+  margin: 0;
+}
+
+.body {
+
+}
