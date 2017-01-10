@@ -1,0 +1,32 @@
+@import url('skeleton.css');
+@import url('normalize.css');
+
+body {
+  text-align: center;
+}
+
+#hero {
+  font-family: 'bungee shade';
+  font-size: 5em;
+}
+
+/* list items */
+.item {
+  border : 1px solid black;
+  margin-bottom: 5%;
+  display: flex;
+}
+
+/*upvotes*/
+.vote {
+
+}
+
+.vote i{
+  font-size: 2em;
+}
+
+/*Title*/
+
+
+/*Description*/
