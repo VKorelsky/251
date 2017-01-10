@@ -4,28 +4,9 @@ const exphbs = require('express-handlebars');
 
 const app = express();
 const port = 3000;
+const bodyParser = require('body-parser');
 
-var bodyParser = require('body-parser'),
-    mongoose = require('mongoose');
-
-// Database
-Schema = new mongoose.Schema({
-  upvotes  : {type: Number, default: 0},
-  title    : String,
-  body     : String,
-  date     : { type: Date, default: Date.now }
-});
-
-Posts = mongoose.model('Posts', Schema);
-
-mongoose.connect('mongodb://localhost/test');
-var db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-
-db.once('open', function() {
-  console.log("DB connection established");
-});
+require(__dirname + "/db/config.js");
 
 // Server
 app.engine('.hbs', exphbs({
