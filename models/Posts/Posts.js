@@ -8,3 +8,5 @@ var mongoose = require('mongoose'),
              }),
 
     Posts = mongoose.model('Post', Schema);
+
+module.exports = Posts;

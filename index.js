@@ -7,6 +7,7 @@ const port = 3000;
 const bodyParser = require('body-parser');
 
 require(__dirname + "/db/config.js");
+var Posts = require(__dirname + "/models/Posts/Posts.js");
 
 // Server
 app.engine('.hbs', exphbs({
@@ -25,9 +26,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.get('/', (request, response) => {
   //Fetch data in database
+  posts = Posts.find( function(err, posts) {
+    console.log(posts);
+    console.log(err);
 
-  response.render('home', {
-    name: 'world'
+    response.render('home', {
+      posts : posts
+    })
   })
 })
 
