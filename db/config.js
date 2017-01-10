@@ -1,6 +1,6 @@
-var seed = require('seed-mongoose')({
-            path : 'db/seeds'
-        });
+// var seed = require('seed-mongoose')({
+//             path : 'db/seeds'
+//         });
 
 var mongoose = require('mongoose'),
     path = require('path');

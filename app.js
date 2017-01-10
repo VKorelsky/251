@@ -7,7 +7,6 @@ const port = 3000;
 const bodyParser = require('body-parser');
 
 require(__dirname + "/db/config.js");
-var Posts = require(__dirname + "/models/Posts/Posts.js");
 
 // Server
 app.engine('.hbs', exphbs({
@@ -24,29 +23,34 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.get('/', (request, response) => {
-  //Fetch data in database
-  posts = Posts.find( function(err, posts) {
-    console.log(posts);
-    console.log(err);
+var Posts = require(__dirname + "/models/Posts/Posts.js");
 
-    response.render('home', {
+app.get('/', (req, res) => {
+  posts = Posts.find( function(err, posts) {
+    res.render('home', {
       posts : posts
     })
   })
 })
 
-app.post('/submission', (request, response) => {
-  // Save post to DB
-  //return a json - 200 OK, 500 ERROR
-  console.log(request);
-  response.json(200, {msg: 'OK'})
+app.post('/submission', (req, res) => {
+  // Save new-post to DB
+
+  console.log(req.params);
+  res.json(200, {msg : 'OK'})
 })
 
-// error logging middleware
-app.use((err, request, response, next) => {
+app.post('/upvote/:id', (req, res) => {
+  // persist upvote to db
+  console.log(req.params);
+  res.json(200, {msg : 'OK'})
+})
+
+
+// middleware
+app.use((err, req, res, next) => {
   console.log(err)
-  response.status(500).send('Something broke!')
+  res.status(500).send('Something broke!')
 })
 
 
